@@ -1,0 +1,41 @@
+@model Almacen
+
+@{
+    ViewData["Title"] = "Delete";
+     Layout="_Simple";
+}
+
+
+
+<h3>Realmente desea eliminar este Almacen?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Capacidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ubicacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ubicacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-primary" /> |
+        <a asp-action="Index">Volver Atras</a>
+    </form>
+</div>
